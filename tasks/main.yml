@@ -1,0 +1,16 @@
+---
+# tasks file for Jenkinsrole1
+
+
+
+- name: Setup Jenkins Master
+  hosts: all
+  gather_facts: true
+  become: yes
+  become_method: sudo
+
+  tasks:
+          - include_tasks: yumupdate.yml
+          - include_tasks: Installpkg.yml
+          - include_tasks: Installjenkin.yml
+

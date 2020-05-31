@@ -1,0 +1,15 @@
+
+---
+
+#- name: Install Jenkins software
+  #  hosts: all
+  #  become: yes
+  #  become_method: sudo
+
+
+#tasks:
+- name: Update the software package repository
+  yum:
+          name: '*'
+          state: latest
+...
